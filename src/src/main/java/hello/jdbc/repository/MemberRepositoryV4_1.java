@@ -84,7 +84,7 @@ public class MemberRepositoryV4_1 implements MemberRepository {
             con = getConnection();
             pstmt = con.prepareStatement(sql);
             pstmt.setInt(1, money);
-            pstmt.setString (2, memberId);
+            pstmt.setString(2, memberId);
 
             int resultSize = pstmt.executeUpdate();
             log.info("resultSize={}", resultSize);
@@ -104,7 +104,7 @@ public class MemberRepositoryV4_1 implements MemberRepository {
         try {
             con = getConnection();
             pstmt = con.prepareStatement(sql);
-            pstmt.setString (1, memberId);
+            pstmt.setString(1, memberId);
             pstmt.executeUpdate();
         } catch (SQLException e) {
             throw new MyDbException(e);
